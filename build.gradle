@@ -1,0 +1,25 @@
+plugins {
+  id 'java'
+}
+
+group = 'com.julienjungo'
+version = '1.0-SNAPSHOT'
+
+repositories {
+  mavenCentral()
+}
+
+java {
+  toolchain {
+    languageVersion = JavaLanguageVersion.of(24)
+  }
+}
+
+dependencies {
+  implementation 'org.apache.ratis:ratis-server:3.2.0'
+  implementation 'org.apache.ratis:ratis-grpc:3.2.0'
+  implementation 'org.apache.ratis:ratis-metrics-default:3.2.0'
+  implementation 'com.fasterxml.jackson.core:jackson-core:2.20.0'
+  implementation 'com.fasterxml.jackson.core:jackson-databind:2.20.0'
+  implementation 'org.springframework.boot:spring-boot-starter-webflux:3.5.6'
+}
